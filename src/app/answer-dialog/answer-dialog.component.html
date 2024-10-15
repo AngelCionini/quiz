@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 mat-dialog-title>Risultato</h1>
+    <div mat-dialog-content>
+        <p>{{ risultato }} Hai risposto correttamente a {{ data.correctAnswers }} domande su {{ data.totalQuestions }}.</p>
+    </div>
+    <div mat-dialog-actions class="button-container">
+        <button mat-button (click)="onClose()">OK</button>
+    </div>
+</div>
+
+

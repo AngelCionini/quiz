@@ -1,0 +1,22 @@
+
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <ul *ngFor="let element of questionario; let i = index">
+        <li>
+            <label id="question" [innerHTML]="sanitizeHtml(element.question)">{{ element.question}}</label>
+            <mat-radio-group
+            aria-labelledby="question"
+            [(ngModel)]="element.selected_answer"
+            name="answer_{{ i }}" 
+            (change)="element.is_answered = true; updateCorrectAnswersCount()"
+            required>
+                <p *ngFor="let answer of element.mix_answers" 
+                [ngClass]="{'correct-answer': element.is_answered && answer === element.correct_answer,
+                'wrong-answer': element.is_answered && answer === element.selected_answer && answer !== element.correct_answer}">
+                <mat-radio-button [value]="answer" [disabled]="element.is_answered">
+                <span [innerHTML]="sanitizeHtml(answer)">{{ answer }}</span></mat-radio-button>
+                </p>
+            </mat-radio-group>
+        </li>
+    </ul>
+    <button mat-button type="submit">Invia</button>
+</form>
