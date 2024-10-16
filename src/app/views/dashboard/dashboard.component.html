@@ -1,0 +1,11 @@
+<div>
+    <h1 class="testoCentrato">Questionario su {{ getCategoryName(category) }} di livello: {{ getDifficultyLevel(level) }}</h1>
+
+</div>
+<div *ngIf="isLoading; else quiz" class="spinner-container">
+    <mat-spinner mode="indeterminate" value="40" color="blue"></mat-spinner>
+    <p class="spinner-text">Sto caricando il questionario...</p>
+</div>
+<ng-template #quiz>
+    <app-questionario [questionario]="questionario" (counterCount)="updateCount($event)"></app-questionario>
+</ng-template>

@@ -4,36 +4,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule, MatIconButton } from '@angular/material/button';
-import { HeaderComponent } from './header/header.component';
-import { VideogamesComponent } from './videogames/videogames.component';
+import { HeaderComponent } from './core/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { LibriComponent } from './libri/libri.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
-import { FilmComponent } from './film/film.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
+import { HomeComponent } from './views/home/home.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { AnswerDialogComponent } from './answer-dialog/answer-dialog.component';
+import { AnswerDialogComponent } from './views/answer-dialog/answer-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
-import { QuestionarioComponent } from './questionario/questionario.component';
-import { CounterComponent } from './counter/counter.component';
+import { QuestionarioComponent } from './views/questionario/questionario.component';
+import { CounterComponent } from './views/counter/counter.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    VideogamesComponent,
-    LibriComponent,
     NotFoundComponent,
     HomeComponent,
-    FilmComponent,
     AnswerDialogComponent,
     QuestionarioComponent,
     CounterComponent,
+    DashboardComponent
   ],
   bootstrap: [AppComponent],
   imports: [

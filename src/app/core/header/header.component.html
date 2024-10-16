@@ -1,0 +1,32 @@
+<header>
+    <button mat-button class="mat-button" [matMenuTriggerFor]="menu">
+        <mat-icon>list</mat-icon>Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="videogames">Videogames</button>
+  <button mat-menu-item [matMenuTriggerFor]="film">Film</button>
+  <button mat-menu-item [matMenuTriggerFor]="libri">Libri</button>
+</mat-menu>
+
+<mat-menu #videogames="matMenu">
+  <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.EASY, category: 15}">Facile</button>
+  <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.MEDIUM, category: 15}">Medio</button>
+  <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.HARD, category: 15}">Difficile</button>
+</mat-menu>
+
+<mat-menu #film="matMenu">
+    <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.EASY, category: 11}" >Facile</button>
+    <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.MEDIUM, category: 11}">Medio</button>
+    <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.HARD, category: 11}">Difficile</button>
+  </mat-menu>
+
+  <mat-menu #libri="matMenu">
+    <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.EASY, category: 10}">Facile</button>
+    <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.MEDIUM, category: 10}">Medio</button>
+    <button mat-menu-item [routerLink]="['/dashboard']" [queryParams] ="{level: difficulty.HARD, category: 10}">Difficile</button>
+  </mat-menu>
+
+  <button mat-button class="mat-button home-button" [routerLink]="['/home']" (click)="onClickInvisible()">
+    <mat-icon>home</mat-icon> Home
+  </button>
+  
+</header>

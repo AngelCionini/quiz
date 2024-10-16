@@ -1,29 +1,19 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { VideogamesComponent } from './videogames/videogames.component';
-import { LibriComponent } from './libri/libri.component';
-import { FilmComponent } from './film/film.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
-import { QuestionarioComponent } from './questionario/questionario.component';
-import { DifficultyEnum } from './quiz.model';
+import { NotFoundComponent } from './views/not-found/not-found.component';
+import { HomeComponent } from './views/home/home.component';
+import { QuestionarioComponent } from './views/questionario/questionario.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+
 
 export const routes: Routes = [
     {
-        path: 'videogames',
-        component: VideogamesComponent
-    },
-    {
-      path: 'film',
-      component: FilmComponent
-    },
-    {
-      path: 'libri',
-      component: LibriComponent
-    },
-    {
       path: 'quiz',
       component: QuestionarioComponent
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent
     },
     {
       path: 'home',

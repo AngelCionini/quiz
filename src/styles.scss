@@ -40,7 +40,7 @@ $quiz-project-theme: mat.define-light-theme((
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 button:hover {
-  background-color: darkblue; /* Cambia il colore del pulsante al passaggio del mouse */
+  background-color: rgb(69, 43, 119); /* Cambia il colore del pulsante al passaggio del mouse */
 
 }
 button {
@@ -76,4 +76,94 @@ mat-spinner {
   font-size: 18px;
   color: blue;
   font-weight: bold;
+}
+
+.correct-answer {
+  background-color: #d4edda;
+}
+
+.wrong-answer {
+  background-color: #f8d7da;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 0 auto; /* Centra il pulsante orizzontalmente */
+  background-color: blue; /* Imposta il colore di sfondo del pulsante */
+  color: white !important; /* Colore del testo */
+  padding: 10px 20px; /* Aggiunge un po' di spazio interno al pulsante */
+  border: none; /* Rimuove i bordi */
+  border-radius: 4px; /* Arrotonda leggermente gli angoli */
+  cursor: pointer; /* Cambia il cursore al passaggio sopra il pulsante */
+}
+
+button[type="submit"]:hover {
+  background-color: darkblue; /* Cambia il colore del pulsante al passaggio del mouse */
+}
+
+.fixed-counter {
+  position: fixed;
+  top: 10%; /* Distanza dalla parte superiore della pagina */
+  right: 10%; /* Distanza dal lato destro della pagina */
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo semitrasparente per renderlo leggibile */
+  color: white; /* Colore del testo */
+  padding: 10px; /* Spaziatura interna */
+  border-radius: 5px; /* Bordo arrotondato */
+  z-index: 1000; /* Assicura che sia in primo piano rispetto ad altri elementi */
+  text-align: center; /* Centra il testo all'interno del box */
+}
+
+.testoCentrato {
+  text-align: center;
+}
+
+mat-radio-button {
+  span {
+      cursor: pointer;
+  }
+}
+
+
+div {
+  text-align: left;
+}
+
+header {
+  background: linear-gradient(to bottom, #000025, #4b0082);
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+}
+
+.home-button {
+  right: 5px;
+}
+
+.mat-button {
+  color: white !important;
+  background-color: transparent;
+}
+
+.fixed-counter {
+  position: fixed;
+  top: 10%; /* Distanza dalla parte superiore della pagina */
+  right: 10%; /* Distanza dal lato destro della pagina */
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo semitrasparente per renderlo leggibile */
+  color: white; /* Colore del testo */
+  padding: 10px; /* Spaziatura interna */
+  border-radius: 5px; /* Bordo arrotondato */
+  z-index: 1000; /* Assicura che sia in primo piano rispetto ad altri elementi */
+  text-align: center; /* Centra il testo all'interno del box */
+}
+
+.container {
+  padding: 20px;
+  .button-container {
+    margin-top: 8px;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(253, 253, 164);
+  }
 }
